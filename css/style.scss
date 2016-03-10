@@ -1,0 +1,706 @@
+/*
+	Codecake SCSS table of contents
+
+	1 - Import documentation
+		a - reset.scss
+		b - fonts.scss
+		c - mixins.scss
+
+	2 - Main styling
+		a - wrapper
+
+	3 - Section Styling
+		a - header
+
+	Last Updated on Monday 15th September 2014
+	@_ioerror 	
+*/
+
+
+
+/************************/
+/*	
+/*	1 - Import Documentation
+/*
+/************************/
+
+
+@import 'reset.scss';
+@import 'mixins.scss';
+@import 'slider.scss';
+
+
+/************************/
+/*	
+/*	2 - Main Styling
+/*
+/************************/
+
+
+#wrapper{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.section-content{
+  	width: 1000px;
+  	margin: 0 auto;
+
+  	h1{
+		font-weight: 600;
+		color: #434a54;
+		letter-spacing: 4px;
+		font-size: 20px;
+		text-transform: uppercase;
+		margin-bottom: 75px;
+	}
+}
+ 
+
+
+
+/************************/
+/*	
+/*	3 - Section Styling
+/*
+/************************/
+
+header{
+	height: 600px;
+	min-height: 600px;
+	width: 100%;
+	min-width: 1000px;
+	position: relative;
+	background: url(../images/header-background.png) center no-repeat; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+ 	
+ 	.nav-content{
+	  	width: 1000px;
+	  	height: 100px;
+	  	margin: 0 auto;
+  	}
+	
+	 #logo{
+		float: left;
+		display: block;
+		padding-top: 25px;
+	
+		img{
+			opacity: 0.25;
+			cursor: pointer;
+			@include animation(.3s);
+		}
+
+		img:hover{
+			opacity: 0.75;
+		}
+	}
+}
+
+
+
+header{
+	nav{
+		float: right;
+		display: block;
+		padding-top: 25px;
+	
+		img{
+			opacity: 0.25;
+			cursor: pointer;
+			@include animation(.3s);
+		}
+
+		img:hover{
+			opacity: 0.50;
+		}
+	}
+}
+
+
+
+header nav, li{
+	display: inline;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+nav #nav li{
+    position:relative;
+}
+
+nav #nav a{
+    display:block;
+    color: rgba(255,255,255,0.50);
+    @include animation(.2s);
+}
+
+nav #nav a:hover{
+    color: rgba(255,255,255,0.75);
+    padding-left: 10px;
+    border-left: 2px solid rgba(255,255,255,0.75);
+}
+
+/*--- DROPDOWN ---*/
+nav #nav #drop-down{
+	text-align: left;
+	width: 100px;
+	/*background: rgba(255,255,255,0.10);
+	margin-left: -45px; 
+	margin-top: -2px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 20px;
+	@include border-radius(4px);*/
+}
+
+nav #nav #drop-down a{
+	margin-top: 20px;
+}
+
+nav #nav ul{
+    position: absolute;
+    display: none;
+}
+
+header{
+
+	.section-content{
+		position: relative;
+		text-align: center;
+		top: 33.33%;
+
+		h1{
+			font-weight: 400;
+			color: #fff;
+			letter-spacing: 2px;
+			font-size: 40px;
+			margin-bottom: 30px;
+		}
+
+		h2{
+			font-weight: 100;
+			color: #fff;
+			letter-spacing: 2px;
+			word-spacing: 4px;
+			font-size: 20px;
+		}
+
+		h1, h2{
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+
+
+/*
+	Sub Info
+*/
+
+#sub-info{
+	padding-top: 100px;
+	padding-bottom: 100px;
+	text-align: center;
+
+	.section-content{
+		width: 800px;
+	}
+
+	.body{
+		margin-bottom: 50px;
+	}
+}
+
+
+
+
+/*
+	Products
+*/
+
+#products{
+	width: 100%;
+	min-width: 1000px;
+	padding-top: 100px;
+	padding-bottom: 50px;
+	background: #262729;
+	text-align: center;
+	min-height: 100%; 
+    overflow-y: hidden; 
+
+	h1{
+		color: #ffffff;
+	}
+
+	.project{
+		height: 100%;
+		width: 100%;
+		position: relative;
+		@include border-radius(30px);
+	}
+
+	.project-overlay{
+		height: 300px;
+		background: rgba(116,178,230,0.95);
+		opacity: 0;
+		@include animation(.4s);
+
+		.project-content{
+			padding-top: 130px;
+		}
+
+		h1{
+			font-size: 20px;
+			font-weight: 600;
+			margin-bottom: 0px;
+		}
+
+		p{
+			color: #fff;
+			text-transform: none;
+			letter-spacing: 2px;
+		}
+	}
+
+	.project-overlay:hover{
+		opacity: 1;
+	}
+
+	#plymouth-uni{
+		height: 100%;
+		width: 100%;
+		background: url('../images/projects/plymouthuni.png');
+		background-size: 100% 100%;
+	    background-position: center center;
+	    @include animation(.2s);
+	}
+
+	#plymouth-uni:hover{
+		background-size: 105% 105%;
+	}
+
+	#meteorjs{
+		height: 100%;
+		width: 100%;
+		background: url('../images/projects/meteorjs.png');
+		background-size: 100% 100%;
+	    background-position: center center;
+	    @include animation(.2s);
+	}
+
+	#meteorjs:hover{
+		background-size: 105% 105%;
+	}
+
+	#appui{
+		height: 100%;
+		width: 100%;
+		background: url('../images/projects/appui.png');
+		background-size: 100% 100%;
+	    background-position: center center;
+	    @include animation(.2s);
+	}
+
+	#appui:hover{
+		background-size: 105% 105%;
+	}
+
+	#sushio{
+		height: 100%;
+		width: 100%;
+		background: url('../images/projects/sushio.png');
+		background-size: 100% 100%;
+	    background-position: center center;
+	    @include animation(.2s);
+	}
+
+	#sushio:hover{
+		background-size: 105% 105%;
+	}
+
+	#hoax{
+		height: 100%;
+		width: 100%;
+		background: url('../images/projects/hoax.png');
+		background-size: 100% 100%;
+	    background-position: center center;
+	    @include animation(.2s);
+	}
+
+	#hoax:hover{
+		background-size: 105% 105%;
+	}
+
+	#dogma{
+		height: 100%;
+		width: 100%;
+		background: url('../images/projects/dogmaart.png');
+		background-size: 100% 100%;
+	    background-position: center center;
+	    @include animation(.2s);
+	}
+
+	#dogma:hover{
+		background-size: 105% 105%;
+	}
+}
+
+
+
+
+/*
+	The Team
+*/
+
+#team{
+	min-height: 100%; 
+	width: 100%;
+	min-width: 1000px;
+	padding-top: 100px;
+	padding-bottom: 50px;
+	text-align: center;
+    overflow-y: hidden; 
+
+	.member{
+		height: 100%;
+		width: 100%;
+		position: relative;
+		@include border-radius(30px);
+	}
+
+	.member-overlay{
+		height: 300px;
+		background: rgba(116,178,230,0.95);
+		opacity: 0;
+		@include animation(.4s);
+
+		.member-content{
+			padding-top: 140px;
+		}
+
+		h1{
+			color: #fff;
+			font-size: 20px;
+			font-weight: 600;
+			margin-bottom: 0px;
+		}
+
+		p{
+			color: #fff;
+			text-transform: none;
+			letter-spacing: 2px;
+		}
+
+		li{
+			margin: 0 10px;
+		}
+
+		img{
+			opacity: 0.4;
+			@include animation(.2s);
+		}
+
+		img:hover{
+			opacity: 0.8;
+		}
+	}
+
+	.member-overlay:hover{
+		opacity: 1;
+	}
+
+	.member-bio{
+		text-align: left;
+		margin-top: 30px;
+
+		h1{
+			margin-bottom: 10px;
+		}
+
+		h2{
+			font-size: 14px;
+			font-weight: 300;
+			text-transform: none;
+			color: #606060;
+			margin-bottom: 10px;
+		}
+
+		p{
+			text-transform: none;
+			color: #888888;
+			text-align: justify;
+		}
+	}
+
+	#joss{
+		height: 300px;
+		background: url('../images/team/joss.png');
+	}
+
+	#jesse{
+		height: 300px;
+		background: url('../images/team/jesse.png');
+	}
+
+	#funtcase{
+		height: 300px;
+		background: url('../images/team/funtcase.png');
+	}
+
+	#walter{
+		height: 300px;
+		background: url('../images/team/walter.png');
+	}
+
+	#cookie{
+		height: 300px;
+		background: url('../images/team/cookie.png');
+	}
+
+	#saul{
+		height: 300px;
+		background: url('../images/team/saul.png');
+	}
+}
+
+
+
+/*
+	Customers
+*/
+
+#customers{
+	height: 350px;
+	min-height: 350px;
+	width: 100%;
+	min-width: 1000px;
+	position: relative;
+	background: url(../images/customers-background.png) center no-repeat; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+
+  	.section-content{
+  		position: relative;
+  		top: 33.33%;
+  		width: 800px;
+  		color: #fff;
+  		text-align: center;
+
+  		blockquote{
+  			font-family: 'proxima-nova' ,sans-serif;
+  			font-size: 22px;
+  			font-weight: 400;
+  			line-height: 35px;
+  			text-transform: none;
+  			font-style: italic;
+  			margin-bottom: 20px;
+  		}
+
+  		h1{
+  			margin-bottom: 5px;
+  			color: #fff;
+  		}
+
+  		p{
+  			text-transform: none;
+  			letter-spacing: 1px;
+  			margin-bottom: 0;
+  		}
+  	}
+}
+
+
+
+/*
+	Contact
+*/
+
+#contact{
+	min-height: 100%; 
+	width: 100%;
+	min-width: 1000px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	text-align: center;
+    overflow-y: hidden; 
+
+    #form{
+    	margin-top: 75px;
+
+    	.first{
+    		margin-right: 10px;
+    		}
+
+    	input{
+    		width: 468px;
+    		height: 30px;
+    		margin: 0 0;
+    		margin-bottom: 15px;
+    		border: none;
+    		border: 2px solid #f0f0f0;
+    		outline: none;
+    		background: #f0f0f0;
+    		color: #7a7a7a;
+    		padding: 10px;
+    		font-size: 14px;
+    		@include animation(.2s);
+    	}
+
+    	input:hover{
+    		border: 2px solid #b2dafc;
+    	}
+
+    	input:focus{
+    		border: 2px solid #74b2e6;
+    	}
+
+    	textarea{
+    		width: 976px;
+    		height: 300px;
+    		margin-bottom: 50px;
+    		border: none;
+    		border: 2px solid #f0f0f0;
+    		outline: none;
+    		background: #f0f0f0;
+    		color: #7a7a7a;
+    		padding: 10px;
+    		font-size: 14px;
+    		resize:none;
+    		@include animation(.2s);
+    	}
+
+    	textarea:hover{
+    		border: 2px solid #b2dafc;
+    	}
+
+    	textarea:focus{
+    		border: 2px solid #74b2e6;
+    	}
+
+    	#formsubmit{
+    		width: 50px;
+    		height: 50px;
+    		color: rgba(255,255,255,0);
+    		background: #74b2e6;
+			background-image: url('../images/formsubmit.png');
+			background-repeat: no-repeat;
+    		background-position: -2px; 
+    		border: none;
+    		outline: none;
+    		opacity: 0.6;
+    		cursor: pointer;
+    		@include border-radius(50%);
+    	}	
+
+    	#formsubmit:hover{
+    		width: 300px;
+    		height: 50px;
+    		color: rgba(255,255,255,1);
+    		background: #74b2e6;
+    		opacity: 1;
+    		@include border-radius(100px);
+    	}
+
+    	h1{
+    		text-transform: none;
+    		letter-spacing: 0;
+    		font-size: 50px;
+    		margin-bottom: 10px;
+
+    		span{
+    			text-transform: capitalize;
+    		}
+    	}
+
+    	p{
+    		font-size: 18px;
+
+
+	    	span{
+	    		padding-bottom: 3px;
+	    		border-bottom: 1px dotted #434a54;
+	    	}
+    	}
+    }
+}
+
+
+
+
+/*
+	Footer
+*/
+
+footer{
+	min-height: 100%; 
+	width: 100%;
+	min-width: 1000px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	background: #1c1c1c;
+	text-align: center;
+    overflow-y: hidden; 
+
+    .col-3{
+    	margin: 0;
+    	width: 33.33%;
+    }
+
+    .left{
+    	text-align: left;
+    	padding-top: 10px;
+
+    	img{
+    		opacity: 0.5;
+    	}
+    }
+
+    .mid{
+    	text-align: center;
+    	padding-top: 35px;
+
+    	p{
+    		color: #707070;
+    	}
+
+    	span{
+    		font-weight: 600;
+    		font-style: italic;
+    	}
+    }
+
+    .right{
+    	text-align: right;
+    	padding-top: 30px;
+
+    	li{
+    		margin-left: 15px;
+
+    		img{
+    			opacity: 0.6;
+    			@include animation(.2s);
+    		}
+
+    		img:hover{
+    			opacity: 1;
+    		}
+    	}
+    }
+}
+
+
+
+
+
+
+
+
+
