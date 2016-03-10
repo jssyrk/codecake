@@ -454,7 +454,7 @@
     </div>
 
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/jquery.validate.min.js"></script>
-<script src="scripts/app.min.js"></script>
+<script src="scripts/app.js"></script>
 
 </body>
 </html>
